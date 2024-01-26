@@ -11,20 +11,20 @@ body, .flexcontainer {
     height: 100vh;
     align-content: center;
  }
- .container1, .container2, .cards, .overview, .blackcard, .greencard, .stat {
+ .container1, .container2, .cards, .blackheader, .overview, .blackcard, .greencard, .stat, .gcardbot, .gcardtext, {
     margin: base.$spacing;
     border-radius: base.$radius;
  }
- .container1, .stat, .split2, .bottom, .top {
+ .container1, .stat, .split1, .blackcard, .greencard, .botboxsmall, .smalltop, .smallbot, .botboxmain, .split2, .bottom, .top, .stat3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
  }
- .stat, .split2, .top, .bottom {
+.stat, .split2, .split1, .top, .bottom, .botboxmain, .botboxsmall, .smalltop, .smallbot {
     border-radius: base.$radius;
     
  }
- .blackcard, .container1, .top, .bottom {
+ .blackcard, .container1, .top, .bottom, .split1 {
     background-color: base.$myblack;
     color: base.$mywhite; 
  }
@@ -61,16 +61,32 @@ body, .flexcontainer {
         .blackcard, .greencard {
             width: 50%;
         }
+        .blackcard {
+            text-align: center;
+            .center {
+                color: base.$mygreen;
+                font-size: 4em;
+                height: 70%;
+            }
+        }
         .greencard {
             background-color: base.$mygreen;
+            .order {
+                background-color: base.$myblack;
+                color: base.$mygreen;
+                padding: base.$spacing;
+                border-radius: base.$spacing;
+                font-size: small;
+ 
+            }
         }
      }
      .overview {
         width: 99%;
-        background-color: bisque;
         display: flex;
         margin-bottom: 0;
         margin-top: 0;
+        color: base.$mywhite;
         .ot1 {
             width: 50%;
             align-self: center;
@@ -103,18 +119,18 @@ body, .flexcontainer {
         }
     }
 }
-.name, .statheader, .button, .btext, .task, .taskbar, .arrow {
+.name, .statheader, .button, .split1, .box, .btext, .task, .taskbar, .arrow {
     margin: base.$smallspace;
 }
 .btext {
     margin-top: 2%;
     font-size: x-large;
 }
-.name, .statheader, .task {
+.name, .statheader, .task, .gcardbot, .blackheader{
     display: flex;
     justify-content: space-between;
 }
-.name {
+.name, .smalltext {
     font-size: small;
 }
 .task {
@@ -134,7 +150,7 @@ body, .flexcontainer {
             
         }
 }
-.bar1, .bar2, .bar3, .bar5 {
+.bar1, .bar2, .bar3, .bar5, .smalltop, .smallbot {
     align-self: flex-end;
     text-align: center;
    
@@ -172,10 +188,98 @@ body, .flexcontainer {
     width: 89%;
     height: 2px;
     background-color: base.$mygray;
-        .greentaskbar {
-            width: 80%;
-            height: 2px;
-            background-color: base.$mygreen;
-            z-index: 999;
+    .greentaskbar {
+        width: 80%;
+        height: 2px;
+        background-color: base.$mygreen;
         }
+}
+.gray {
+    color: base.$mylightgray;
+    font-size: x-small;
+}
+.graph img{
+    width: 100%;
+    height: 95%;
+}
+.weekpoints {
+    color: base.$mywhite;
+    font-size: x-small;
+}
+.weektext {
+    font-size: 5px;
+    color: base.$mylightgray;
+}
+.capsule {
+    font-size: 7px;
+    width: 7em;
+    padding: 1.5%;
+    color: base.$myblack;
+    background-color: base.$mygreen;
+    border-radius: base.$radius;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    .blackcapsule {
+        color: base.$mygreen;
+        padding: 0 .5em;
+        background-color: base.$myblack;
+        border-radius: base.$radius;
+        margin: 0 base.$smallspace 0 base.$smallspace;
+    }
+}
+.box {
+    width: 60%;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    .graybox, .greenbox {
+            width: 5px;
+            height: 5px;
+            margin-top: 3%;
+            background-color: base.$mylightgray;
+            border-radius: 1px;
+        }
+    .greenbox {
+            background-color: base.$mygreen;
+        }
+}
+.stat3 {
+    width: 100%;
+    height: 33%;
+    background-color: base.$myblack;
+    border-radius: base.$radius;
+    color: base.$mywhite;
+}
+.botbox, .topbox {
+    margin-bottom: 0;
+    height: 28%;
+}
+.midbox {
+    height: 40%;
+}
+.botbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: base.$mygray;
+}
+.botboxmain {
+    width: 70%;
+    height: 100%;
+    background-color: base.$myblack;
+    font-size: smaller;
+
+}
+.botboxsmall {
+    width: 27%;
+    height: 100%;
+    .smalltop, .smallbot {
+        background-color: base.$myblack;
+        height: 48%;
+        width: 100%;
+    }
+    .smallbot {
+        background-color: base.$mygreen;
+    }
 }

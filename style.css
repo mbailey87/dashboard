@@ -11,23 +11,23 @@ body, .flexcontainer {
   align-content: center;
 }
 
-.container1, .container2, .cards, .overview, .blackcard, .greencard, .stat {
+.container1, .container2, .cards, .blackheader, .overview, .blackcard, .greencard, .stat, .gcardbot, .gcardtext {
   margin: 0.5em;
   border-radius: 1em;
 }
 
-.container1, .stat, .split2, .bottom, .top {
+.container1, .stat, .split1, .blackcard, .greencard, .botboxsmall, .smalltop, .smallbot, .botboxmain, .split2, .bottom, .top, .stat3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.stat, .split2, .top, .bottom {
+.stat, .split2, .split1, .top, .bottom, .botboxmain, .botboxsmall, .smalltop, .smallbot {
   border-radius: 1em;
 }
 
-.blackcard, .container1, .top, .bottom {
-  background-color: rgb(24, 24, 24);
+.blackcard, .container1, .top, .bottom, .split1 {
+  background-color: rgb(29, 29, 29);
   color: #d6d6d6;
 }
 
@@ -66,15 +66,30 @@ body, .flexcontainer {
 .container2 .cards .blackcard, .container2 .cards .greencard {
   width: 50%;
 }
+.container2 .cards .blackcard {
+  text-align: center;
+}
+.container2 .cards .blackcard .center {
+  color: rgb(178, 238, 99);
+  font-size: 4em;
+  height: 70%;
+}
 .container2 .cards .greencard {
   background-color: rgb(178, 238, 99);
 }
+.container2 .cards .greencard .order {
+  background-color: rgb(29, 29, 29);
+  color: rgb(178, 238, 99);
+  padding: 0.5em;
+  border-radius: 0.5em;
+  font-size: small;
+}
 .container2 .overview {
   width: 99%;
-  background-color: bisque;
   display: flex;
   margin-bottom: 0;
   margin-top: 0;
+  color: #d6d6d6;
 }
 .container2 .overview .ot1 {
   width: 50%;
@@ -104,7 +119,7 @@ body, .flexcontainer {
   text-align: end;
 }
 
-.name, .statheader, .button, .btext, .task, .taskbar, .arrow {
+.name, .statheader, .button, .split1, .box, .btext, .task, .taskbar, .arrow {
   margin: 0 5px 0 5px;
 }
 
@@ -113,12 +128,12 @@ body, .flexcontainer {
   font-size: x-large;
 }
 
-.name, .statheader, .task {
+.name, .statheader, .task, .gcardbot, .blackheader {
   display: flex;
   justify-content: space-between;
 }
 
-.name {
+.name, .smalltext {
   font-size: small;
 }
 
@@ -139,7 +154,7 @@ body, .flexcontainer {
   border-radius: 3px;
 }
 
-.bar1, .bar2, .bar3, .bar5 {
+.bar1, .bar2, .bar3, .bar5, .smalltop, .smallbot {
   align-self: flex-end;
   text-align: center;
 }
@@ -190,5 +205,104 @@ body, .flexcontainer {
   width: 80%;
   height: 2px;
   background-color: rgb(178, 238, 99);
-  z-index: 999;
+}
+
+.gray {
+  color: #8b8b8b;
+  font-size: x-small;
+}
+
+.graph img {
+  width: 100%;
+  height: 95%;
+}
+
+.weekpoints {
+  color: #d6d6d6;
+  font-size: x-small;
+}
+
+.weektext {
+  font-size: 5px;
+  color: #8b8b8b;
+}
+
+.capsule {
+  font-size: 7px;
+  width: 7em;
+  padding: 1.5%;
+  color: rgb(29, 29, 29);
+  background-color: rgb(178, 238, 99);
+  border-radius: 1em;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+.capsule .blackcapsule {
+  color: rgb(178, 238, 99);
+  padding: 0 0.5em;
+  background-color: rgb(29, 29, 29);
+  border-radius: 1em;
+  margin: 0 0 5px 0 5px 0 0 5px 0 5px;
+}
+
+.box {
+  width: 60%;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.box .graybox, .box .greenbox {
+  width: 5px;
+  height: 5px;
+  margin-top: 3%;
+  background-color: #8b8b8b;
+  border-radius: 1px;
+}
+.box .greenbox {
+  background-color: rgb(178, 238, 99);
+}
+
+.stat3 {
+  width: 100%;
+  height: 33%;
+  background-color: rgb(29, 29, 29);
+  border-radius: 1em;
+  color: #d6d6d6;
+}
+
+.botbox, .topbox {
+  margin-bottom: 0;
+  height: 28%;
+}
+
+.midbox {
+  height: 40%;
+}
+
+.botbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #2d2d2d;
+}
+
+.botboxmain {
+  width: 70%;
+  height: 100%;
+  background-color: rgb(29, 29, 29);
+  font-size: smaller;
+}
+
+.botboxsmall {
+  width: 27%;
+  height: 100%;
+}
+.botboxsmall .smalltop, .botboxsmall .smallbot {
+  background-color: rgb(29, 29, 29);
+  height: 48%;
+  width: 100%;
+}
+.botboxsmall .smallbot {
+  background-color: rgb(178, 238, 99);
 }/*# sourceMappingURL=style.css.map */
