@@ -1,0 +1,88 @@
+body, .flexcontainer {
+  margin: 0;
+  padding: 0;
+  background-color: #7c7e82;
+}
+
+.flexcontainer {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-content: center;
+}
+
+.container1, .container2, .cards, .statistics, .overview, .blackcard, .greencard, .stat {
+  margin: 0.5em;
+  border-radius: 1em;
+}
+
+.container1, .stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stat {
+  border: 5px solid green;
+}
+
+.blackcard, .container1, .statistics {
+  background-color: rgb(42, 40, 40);
+}
+
+.container1 {
+  width: 25vw;
+  max-width: 20em;
+  margin-right: 0;
+}
+.container1 .c1head {
+  width: 97%;
+  height: 50%;
+}
+.container1 .c1head .logo {
+  width: 100%;
+  height: 20%;
+}
+.container1 .c1head .dashboard {
+  width: 97%;
+  height: 76%;
+}
+.container1 .profile {
+  width: 97%;
+  height: 30%;
+}
+
+.container2 {
+  width: 100%;
+  margin-top: 0;
+}
+.container2 .cards {
+  margin: 0;
+  width: 99%;
+  height: 35%;
+  display: flex;
+}
+.container2 .cards .blackcard, .container2 .cards .greencard {
+  width: 50%;
+}
+.container2 .cards .greencard {
+  background-color: rgb(178, 238, 99);
+}
+.container2 .overview {
+  width: 99%;
+  height: 8%;
+  background-color: bisque;
+  display: flex;
+}
+.container2 .overview .ot1 {
+  width: 50%;
+  align-self: center;
+}
+.container2 .statistics {
+  width: 99%;
+  height: 54.5%;
+  display: flex;
+}
+.container2 .statistics .stat {
+  width: 25%;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,90 @@
+@use 'base';
+
+body, .flexcontainer {
+    margin: 0;
+    padding: 0;
+    background-color: base.$mygray;
+ }
+ .flexcontainer {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-content: center;
+ }
+ .container1, .container2, .cards, .statistics, .overview, .blackcard, .greencard, .stat {
+    margin: base.$spacing;
+    border-radius: base.$radius;
+ }
+ .container1, .stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+ .stat {
+    border: base.$border;
+ }
+ .blackcard, .container1, .statistics {
+    background-color: base.$myblack
+ }
+ .container1 {
+    width: 25vw;
+    max-width: 20em;
+    margin-right: 0;
+    .c1head {
+        width: 97%;
+        height: 50%;
+        .logo {
+            width: 100%;
+            height: 20%;
+        }
+        .dashboard {
+            width: 97%;
+            height: 76%;
+        }    
+    }
+   .profile {
+    width: 97%;
+    height: 30%;
+   }
+
+ }
+ .container2 {
+    width: 100%;
+    margin-top: 0;
+    .cards {
+        margin: 0;
+        width: 99%;
+        height: 35%;
+        display: flex;
+        .blackcard, .greencard {
+            width: 50%;
+        }
+        .blackcard {
+            
+        }
+        .greencard {
+            background-color: base.$mygreen;
+        }
+     }
+     .overview {
+        width: 99%;
+        height: 8%;
+        background-color: bisque;
+        display: flex;
+        .ot1 {
+            width: 50%;
+            align-self: center;
+        }
+     }
+
+    .statistics {
+        width: 99%;
+        height: 54.5%;
+        display: flex; 
+        .stat {
+            width: 25%;
+        }
+    }
+    
+ }
+ 
