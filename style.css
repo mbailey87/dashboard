@@ -1,7 +1,7 @@
 body, .flexcontainer {
   margin: 0;
   padding: 0;
-  background-color: #7c7e82;
+  background-color: #2d2d2d;
 }
 
 .flexcontainer {
@@ -11,23 +11,24 @@ body, .flexcontainer {
   align-content: center;
 }
 
-.container1, .container2, .cards, .statistics, .overview, .blackcard, .greencard, .stat {
+.container1, .container2, .cards, .overview, .blackcard, .greencard, .stat {
   margin: 0.5em;
   border-radius: 1em;
 }
 
-.container1, .stat {
+.container1, .stat, .split2, .bottom, .top {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.stat {
-  border: 5px solid green;
+.stat, .split2, .top, .bottom {
+  border-radius: 1em;
 }
 
-.blackcard, .container1, .statistics {
-  background-color: rgb(42, 40, 40);
+.blackcard, .container1, .top, .bottom {
+  background-color: rgb(24, 24, 24);
+  color: #d6d6d6;
 }
 
 .container1 {
@@ -54,7 +55,7 @@ body, .flexcontainer {
 
 .container2 {
   width: 100%;
-  margin-top: 0;
+  margin: 0;
 }
 .container2 .cards {
   margin: 0;
@@ -70,9 +71,10 @@ body, .flexcontainer {
 }
 .container2 .overview {
   width: 99%;
-  height: 8%;
   background-color: bisque;
   display: flex;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 .container2 .overview .ot1 {
   width: 50%;
@@ -80,9 +82,113 @@ body, .flexcontainer {
 }
 .container2 .statistics {
   width: 99%;
-  height: 54.5%;
   display: flex;
 }
 .container2 .statistics .stat {
   width: 25%;
+  height: 16.7em;
+  display: flex;
+  align-content: space-between;
+}
+.container2 .statistics .stat .top {
+  height: 12em;
+  width: 97%;
+  margin-bottom: 0.4em;
+  justify-content: space-around;
+}
+.container2 .statistics .stat .bottom {
+  justify-content: space-around;
+  height: 4.2em;
+}
+.container2 .statistics .stat .bottom .button {
+  text-align: end;
+}
+
+.name, .statheader, .button, .btext, .task, .taskbar, .arrow {
+  margin: 0 5px 0 5px;
+}
+
+.btext {
+  margin-top: 2%;
+  font-size: x-large;
+}
+
+.name, .statheader, .task {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: small;
+}
+
+.task {
+  font-size: x-small;
+  color: #8b8b8b;
+}
+
+.bars {
+  display: flex;
+  justify-content: space-between;
+  height: 75%;
+}
+.bars .percent {
+  font-size: xx-small;
+  background-color: rgb(178, 238, 99);
+  color: black;
+  border-radius: 3px;
+}
+
+.bar1, .bar2, .bar3, .bar5 {
+  align-self: flex-end;
+  text-align: center;
+}
+
+.bar2, .bar3, .bar4, .bar5 {
+  width: 2em;
+  background-color: #2d2d2d;
+  margin: 0 2px 0 2px;
+  border-radius: 7px;
+}
+
+.bar2 {
+  height: 3em;
+}
+
+.bar3 {
+  height: 4.5em;
+}
+
+.bar5 {
+  height: 6em;
+}
+
+.plus {
+  font-size: small;
+}
+
+.bar4 {
+  height: 10em;
+  background-color: rgb(178, 238, 99);
+}
+
+.green {
+  color: rgb(178, 238, 99);
+}
+
+.arrow {
+  background-color: rgb(178, 238, 99);
+  color: black;
+}
+
+.taskbar {
+  width: 89%;
+  height: 2px;
+  background-color: #2d2d2d;
+}
+.taskbar .greentaskbar {
+  width: 80%;
+  height: 2px;
+  background-color: rgb(178, 238, 99);
+  z-index: 999;
 }/*# sourceMappingURL=style.css.map */

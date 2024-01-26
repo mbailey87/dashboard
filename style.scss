@@ -11,20 +11,22 @@ body, .flexcontainer {
     height: 100vh;
     align-content: center;
  }
- .container1, .container2, .cards, .statistics, .overview, .blackcard, .greencard, .stat {
+ .container1, .container2, .cards, .overview, .blackcard, .greencard, .stat {
     margin: base.$spacing;
     border-radius: base.$radius;
  }
- .container1, .stat {
+ .container1, .stat, .split2, .bottom, .top {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
  }
- .stat {
-    border: base.$border;
+ .stat, .split2, .top, .bottom {
+    border-radius: base.$radius;
+    
  }
- .blackcard, .container1, .statistics {
-    background-color: base.$myblack
+ .blackcard, .container1, .top, .bottom {
+    background-color: base.$myblack;
+    color: base.$mywhite; 
  }
  .container1 {
     width: 25vw;
@@ -50,7 +52,7 @@ body, .flexcontainer {
  }
  .container2 {
     width: 100%;
-    margin-top: 0;
+    margin: 0;
     .cards {
         margin: 0;
         width: 99%;
@@ -59,18 +61,16 @@ body, .flexcontainer {
         .blackcard, .greencard {
             width: 50%;
         }
-        .blackcard {
-            
-        }
         .greencard {
             background-color: base.$mygreen;
         }
      }
      .overview {
         width: 99%;
-        height: 8%;
         background-color: bisque;
         display: flex;
+        margin-bottom: 0;
+        margin-top: 0;
         .ot1 {
             width: 50%;
             align-self: center;
@@ -79,12 +79,103 @@ body, .flexcontainer {
 
     .statistics {
         width: 99%;
-        height: 54.5%;
-        display: flex; 
+        display: flex;
+        
         .stat {
             width: 25%;
+            height: 16.70em;
+            display: flex;
+            align-content: space-between;
+                .top {
+                    height: 12em;
+                    width: 97%;
+                    margin-bottom: .4em;
+                    justify-content: space-around;
+
+                }
+                .bottom {
+                    justify-content: space-around;
+                    height: 4.2em;
+                    .button {
+                        text-align: end;                       
+                    }
+                }
         }
     }
+}
+.name, .statheader, .button, .btext, .task, .taskbar, .arrow {
+    margin: base.$smallspace;
+}
+.btext {
+    margin-top: 2%;
+    font-size: x-large;
+}
+.name, .statheader, .task {
+    display: flex;
+    justify-content: space-between;
+}
+.name {
+    font-size: small;
+}
+.task {
+    font-size: x-small;
+    color: base.$mylightgray;
     
- }
- 
+}
+.bars {
+    display: flex;
+    justify-content: space-between;
+    height: 75%;
+        .percent {
+            font-size: xx-small;
+            background-color: base.$mygreen;
+            color: black;
+            border-radius: 3px;
+            
+        }
+}
+.bar1, .bar2, .bar3, .bar5 {
+    align-self: flex-end;
+    text-align: center;
+   
+}
+.bar2, .bar3, .bar4, .bar5 {
+    width: 2em;
+    background-color: base.$mygray;
+    margin:  0 2px 0 2px;
+    border-radius: 7px;
+}
+.bar2 {
+    height: 3em;
+}
+.bar3 {
+    height: 4.5em;
+}
+.bar5 {
+    height: 6em;
+}
+.plus {
+    font-size: small;
+}
+.bar4 {
+    height: 10em;
+    background-color: base.$mygreen;
+}
+.green {
+    color: base.$mygreen;
+}
+.arrow {
+    background-color: base.$mygreen;
+    color: black;
+}
+.taskbar {
+    width: 89%;
+    height: 2px;
+    background-color: base.$mygray;
+        .greentaskbar {
+            width: 80%;
+            height: 2px;
+            background-color: base.$mygreen;
+            z-index: 999;
+        }
+}
