@@ -2,6 +2,7 @@ body, .flexcontainer {
   margin: 0;
   padding: 0;
   background-color: #2d2d2d;
+  font-family: "Montserrat", sans-serif;
 }
 
 .flexcontainer {
@@ -11,12 +12,20 @@ body, .flexcontainer {
   align-content: center;
 }
 
+.material-symbols-outlined {
+  background-color: rgb(178, 238, 99);
+  border-radius: 50%;
+  color: rgb(29, 29, 29);
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .container1, .container2, .cards, .blackheader, .overview, .blackcard, .greencard, .stat, .gcardbot, .gcardtext {
   margin: 0.5em;
   border-radius: 1em;
 }
 
-.container1, .stat, .split1, .blackcard, .greencard, .botboxsmall, .smalltop, .smallbot, .botboxmain, .split2, .bottom, .top, .stat3 {
+.container1, .dashboard, .dash1, .dash2, .stat, .split1, .blackcard, .greencard, .botboxsmall, .smalltop, .smallbot, .botboxmain, .split2, .bottom, .top, .stat3, .gradiant {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -31,91 +40,152 @@ body, .flexcontainer {
   color: #d6d6d6;
 }
 
+.dashcenter {
+  display: flex;
+  width: 75%;
+  align-items: center;
+  justify-content: center;
+}
+
 .container1 {
   width: 25vw;
   max-width: 20em;
+  min-width: 20em;
   margin-right: 0;
 }
 .container1 .c1head {
-  width: 97%;
-  height: 50%;
-}
-.container1 .c1head .logo {
-  width: 100%;
-  height: 20%;
-}
-.container1 .c1head .dashboard {
-  width: 97%;
-  height: 76%;
-}
-.container1 .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   width: 97%;
   height: 30%;
+  min-height: 20em;
+}
+.container1 .c1head .logo {
+  height: 20%;
+  border-bottom: 2px solid #2d2d2d;
+}
+.container1 .c1head .dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 75%;
+  height: 76%;
+}
+.container1 .c1head .dashboard .dash1, .container1 .c1head .dashboard .dash2 {
+  justify-content: space-around;
+  height: 35%;
+  width: 75%;
+  border-bottom: 2px solid #2d2d2d;
+  font-size: 1.25em;
+}
+.container1 .c1head .dashboard .dash1 .dashicon, .container1 .c1head .dashboard .dash2 .dashicon {
+  background-color: rgb(29, 29, 29);
+  color: #d6d6d6;
+  font-size: 0.75em;
+}
+.container1 .c1head .dashboard .dash2 {
+  height: 75%;
+  border-bottom: none;
+}
+.container1 .profile {
+  align-self: center;
+  flex-direction: column;
+  min-height: 15em;
+  width: 75%;
+  height: 15%;
 }
 
 .container2 {
   width: 100%;
   margin: 0;
+  min-width: 80em;
+  min-height: 50em;
 }
 .container2 .cards {
   margin: 0;
-  width: 99%;
   height: 35%;
   display: flex;
+  min-height: 10em;
 }
 .container2 .cards .blackcard, .container2 .cards .greencard {
   width: 50%;
+  min-height: 75%;
 }
 .container2 .cards .blackcard {
   text-align: center;
 }
 .container2 .cards .blackcard .center {
+  font-family: "Smooch", cursive;
   color: rgb(178, 238, 99);
-  font-size: 4em;
+  font-size: 6em;
   height: 70%;
+}
+.container2 .cards .blackcard .group {
+  background-color: rgb(29, 29, 29);
+  color: #8b8b8b;
+  font-size: 0.75em;
 }
 .container2 .cards .greencard {
   background-color: rgb(178, 238, 99);
+  font-size: 1.5em;
 }
 .container2 .cards .greencard .order {
   background-color: rgb(29, 29, 29);
   color: rgb(178, 238, 99);
   padding: 0.5em;
   border-radius: 0.5em;
-  font-size: small;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
 }
-.container2 .overview {
+.container2 .cards .greencard .order .inventory {
+  background-color: rgb(29, 29, 29);
+  color: rgb(178, 238, 99);
+}
+
+.overview {
   width: 99%;
   display: flex;
   margin-bottom: 0;
   margin-top: 0;
   color: #d6d6d6;
 }
-.container2 .overview .ot1 {
+.overview .ot1 {
   width: 50%;
   align-self: center;
 }
-.container2 .statistics {
-  width: 99%;
+
+.statistics {
+  height: 62%;
   display: flex;
 }
-.container2 .statistics .stat {
+.statistics .stat {
   width: 25%;
-  height: 16.7em;
+  height: 100%;
   display: flex;
   align-content: space-between;
+  min-width: 20em;
 }
-.container2 .statistics .stat .top {
-  height: 12em;
+.statistics .stat .split2 {
+  height: 100%;
+}
+.statistics .stat .top {
+  height: 100%;
   width: 97%;
+  padding: 0 5px 0 5px;
   margin-bottom: 0.4em;
-  justify-content: space-around;
+  justify-content: space-between;
+  min-height: 8em;
 }
-.container2 .statistics .stat .bottom {
-  justify-content: space-around;
-  height: 4.2em;
+.statistics .stat .bottom {
+  padding: 0.5em;
+  justify-content: space-between;
+  height: 33%;
+  align-content: space-between;
 }
-.container2 .statistics .stat .bottom .button {
+.statistics .stat .bottom .button {
   text-align: end;
 }
 
@@ -125,30 +195,49 @@ body, .flexcontainer {
 
 .btext {
   margin-top: 2%;
-  font-size: x-large;
+  font-size: 2em;
+  justify-content: space-around;
 }
 
 .name, .statheader, .task, .gcardbot, .blackheader {
   display: flex;
   justify-content: space-between;
+  height: 15%;
+  font-size: 1.5em;
+}
+
+.statheader {
+  padding: 0.5em;
+  min-width: 5em;
+}
+
+.studentnames {
+  flex-grow: 2;
+}
+
+.gradiant {
+  border-radius: 1em;
+  background: rgb(173, 173, 173);
+  background: linear-gradient(0deg, rgba(173, 173, 173, 0.6152836134) 0%, rgba(29, 29, 29, 0) 38%);
+  opacity: 80%;
 }
 
 .name, .smalltext {
-  font-size: small;
+  font-size: 1.5em;
 }
 
 .task {
-  font-size: x-small;
+  font-size: small;
   color: #8b8b8b;
 }
 
 .bars {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 75%;
 }
 .bars .percent {
-  font-size: xx-small;
+  font-size: x-small;
   background-color: rgb(178, 238, 99);
   color: black;
   border-radius: 3px;
@@ -159,31 +248,39 @@ body, .flexcontainer {
   text-align: center;
 }
 
+.bar1 {
+  height: 20%;
+  font-size: 2em;
+}
+
 .bar2, .bar3, .bar4, .bar5 {
   width: 2em;
   background-color: #2d2d2d;
-  margin: 0 2px 0 2px;
+  margin: 0 2px 5px 2px;
   border-radius: 7px;
 }
 
 .bar2 {
-  height: 3em;
+  height: 35%;
 }
 
 .bar3 {
-  height: 4.5em;
+  height: 45%;
 }
 
 .bar5 {
-  height: 6em;
+  height: 60%;
 }
 
 .plus {
   font-size: small;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .bar4 {
-  height: 10em;
+  height: 75%;
   background-color: rgb(178, 238, 99);
 }
 
@@ -212,9 +309,19 @@ body, .flexcontainer {
   font-size: x-small;
 }
 
+.split1 {
+  height: 100%;
+  min-height: 35em;
+  justify-content: space-around;
+  max-height: 100%;
+}
+
 .graph img {
   width: 100%;
   height: 95%;
+  max-height: 95%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .weekpoints {
@@ -227,7 +334,12 @@ body, .flexcontainer {
   color: #8b8b8b;
 }
 
+.product {
+  min-width: 5em;
+}
+
 .capsule {
+  min-width: 2em;
   font-size: 7px;
   width: 7em;
   padding: 1.5%;
@@ -272,12 +384,14 @@ body, .flexcontainer {
 }
 
 .botbox, .topbox {
-  margin-bottom: 0;
+  margin-bottom: 0 5px 0 5px;
   height: 28%;
+  min-height: 8em;
 }
 
 .midbox {
   height: 40%;
+  min-height: 10em;
 }
 
 .botbox {
@@ -299,10 +413,19 @@ body, .flexcontainer {
   height: 100%;
 }
 .botboxsmall .smalltop, .botboxsmall .smallbot {
+  display: flex;
+  justify-content: center;
   background-color: rgb(29, 29, 29);
   height: 48%;
   width: 100%;
 }
+.botboxsmall .calender {
+  background-color: rgb(29, 29, 29);
+  color: rgb(178, 238, 99);
+  font-size: 2em;
+  align-self: center;
+}
 .botboxsmall .smallbot {
   background-color: rgb(178, 238, 99);
+  color: rgb(29, 29, 29);
 }/*# sourceMappingURL=style.css.map */
