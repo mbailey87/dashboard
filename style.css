@@ -16,7 +16,7 @@ body, .flexcontainer {
   border-radius: 1em;
 }
 
-.container1, .stat, .split1, .blackcard, .greencard, .botboxsmall, .smalltop, .smallbot, .botboxmain, .split2, .bottom, .top, .stat3 {
+.container1, .c1head, .stat, .split1, .blackcard, .greencard, .botboxsmall, .smalltop, .smallbot, .botboxmain, .split2, .bottom, .top, .stat3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -41,12 +41,19 @@ body, .flexcontainer {
   height: 50%;
 }
 .container1 .c1head .logo {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 90%;
   height: 20%;
+  border-bottom: 2px solid #2d2d2d;
 }
 .container1 .c1head .dashboard {
-  width: 97%;
+  width: 90%;
+  background-color: aliceblue;
   height: 76%;
+  align-self: center;
 }
 .container1 .profile {
   width: 97%;
