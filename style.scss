@@ -5,11 +5,14 @@ body, .flexcontainer {
     padding: 0;
     background-color: base.$mygray;
     font-family: "Montserrat", sans-serif;
+    width: 100%;
+    height: fit-content;
+
  }
  .flexcontainer {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     align-content: center;
  }
  .material-symbols-outlined  {
@@ -46,6 +49,7 @@ body, .flexcontainer {
     max-width: 20em;
     min-width: 20em;
     margin-right: 0;
+
     .c1head {
         display: flex;
         flex-direction: column;
@@ -97,7 +101,7 @@ body, .flexcontainer {
  .container2 {
     width: 100%;
     margin: 0;
-    min-width: 80em;
+    min-width: 70em;
     min-height: 50em;
     .cards {
         margin: 0;
@@ -166,20 +170,18 @@ body, .flexcontainer {
             height: 100%;
             display: flex;
             align-content: space-between;
-            min-width: 20em;
             .split2 {
                 height: 100%;
             }
                 .top {
                     height: 100%;
-                    width: 97%;
-                    padding: base.$smallspace;
+                    width: 100%;
                     margin-bottom: .4em;
                     justify-content: space-between;
                     min-height: 8em;
                 }
                 .bottom {
-                    padding: base.$spacing;
+                    padding: base.$spacing 0;
                     justify-content: space-between;
                     height: 33%;
                     align-content: space-between;
@@ -190,7 +192,7 @@ body, .flexcontainer {
         }
     }
     
-.name, .statheader, .button, .split1, .box, .btext, .task, .taskbar, .arrow {
+.name, .statheader, .button, .box, .btext, .task, .taskbar, .arrow {
     margin: base.$smallspace;
 }
 .btext {
@@ -201,15 +203,18 @@ body, .flexcontainer {
 .name, .statheader, .task, .gcardbot, .blackheader{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 15%;
-    font-size: 1.5em;
+    font-size: 1.05em;
 }
 .statheader {
-    padding: base.$spacing;
-    min-width: 5em;
+    padding: base.$smallspace;
+}
+.product {
+    height: fit-content;
 }
 .studentnames {
-    flex-grow: 2;  
+    flex-grow: 1;  
 }
 .gradiant {
     border-radius: base.$radius;
@@ -219,7 +224,7 @@ body, .flexcontainer {
 
 }
 .name, .smalltext {
-    font-size: 1.5em;
+    font-size: 75%;
 }
 
 .task {
@@ -296,14 +301,11 @@ body, .flexcontainer {
 }
 .split1 {
     height: 100%;
-    min-height: 35em;
     justify-content: space-around;
-    max-height: 100%;
 }
 .graph img{
     width: 100%;
     height: 95%;
-    max-height: 95%;
     object-fit:contain;
 }
 .weekpoints {
@@ -314,9 +316,7 @@ body, .flexcontainer {
     font-size: 5px;
     color: base.$mylightgray;
 }
-.product {
-    min-width: 5em;
-}
+
 .capsule {
     min-width: 2em;
     font-size: 7px;
@@ -362,7 +362,8 @@ body, .flexcontainer {
 .botbox, .topbox {
     margin-bottom: base.$smallspace;
     height: 28%;
-    min-height: 8em;
+    padding-top: 3%;
+
 }
 .midbox {
     height: 40%;
@@ -379,6 +380,8 @@ body, .flexcontainer {
     height: 100%;
     background-color: base.$myblack;
     font-size: smaller;
+    padding-top: 3%;
+    
 
 }
 .botboxsmall {
@@ -390,6 +393,7 @@ body, .flexcontainer {
         background-color: base.$myblack;
         height: 48%;
         width: 100%;
+        font-size: smaller;
     }
     .calender {
         background-color: base.$myblack;
